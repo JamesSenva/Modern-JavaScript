@@ -1,14 +1,14 @@
-const form = document.querySelector('.signup-form');
+// const form = document.querySelector('.signup-form');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  console.log(form.username.value);
-});
+// form.addEventListener('submit', e => {
+//   e.preventDefault();
+//   console.log(form.username.value);
+// });
 
-// testing RegEx
+// // testing RegEx
 
-const username = 'shaunyp';
-const pattern = /^[a-z]{6,}$/;
+// const username = 'shaunyp';
+// const pattern = /^[a-z]{6,}$/;
 
 // let result = pattern.test(username);
 
@@ -18,6 +18,19 @@ const pattern = /^[a-z]{6,}$/;
 //   console.log('regex test failed :(');
 // }
 
-let result = username.search(pattern);
+// let result = username.search(pattern);
 
+// console.log(result);
+
+const form = document.querySelector('.signup-form');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  console.log(form.username.value);
+});
+
+const username = form.username.value;
+const pattern = /^[a-z]{5,}$/;
+
+const result = pattern.test(username);
 console.log(result);
